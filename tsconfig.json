@@ -1,0 +1,55 @@
+{
+	"compilerOptions": {
+	  
+	  "module": "esnext",
+	  "strict": true,
+	  "jsx": "preserve",
+	  "importHelpers": true,
+	  "moduleResolution": "node",
+	  "experimentalDecorators": true,
+	  "esModuleInterop": true,
+	  "noImplicitAny": false,
+	  "allowSyntheticDefaultImports": true,
+	  "target": "ES6",
+	  
+	  "sourceMap": true,
+	  "baseUrl": ".",
+	  "types": [
+		"node",
+		"webpack-env",
+		"jest",
+	  ],
+	  "paths": {
+		"@/*": [
+		  "src/*"
+		]
+	  },
+	  "lib": [
+		"esnext",
+		"DOM", 
+		"ES6", 
+		"DOM.Iterable", 
+		"ScriptHost", 
+		"ES2016.Array.Include"
+	  ]
+	},
+	"include": [
+	  "src/**/*.ts",
+	  "src/**/*.tsx",
+	  "src/**/*.vue",
+	  "tests/**/*.ts",
+	  "tests/**/*.tsx"
+	],
+	"exclude": [
+	  "node_modules"
+	],
+	"vueCompilerOptions": {
+		"experimentalCompatMode": 2, // delete after migrating to vue3 (or nuxt3)
+		"experimentalTemplateCompilerOptions": {
+		  "compatConfig": {
+			"MODE": 2
+		  } // delete after migrating to vue3 (or nuxt3)
+		}
+	  }
+  }
+  
